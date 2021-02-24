@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+cd /etc/stunnel
+
+openssl req -new -x509 -nodes -days 3650 -newkey ec:<(openssl ecparam -name prime256v1) -keyout ecc.pem -out ecc.pem -subj "/CN=ecc.pem"
